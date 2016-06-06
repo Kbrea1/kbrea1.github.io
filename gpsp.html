@@ -1,0 +1,2390 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-387cfeaa25ac463275aa2c2daaedb1e54d868005181afe4a5e50659e9a19f2bc.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-ca9b58477bbdd109d33bb26e79b74b80b46b29715d2811b49daaaebbacd880f0.css" media="all" rel="stylesheet" />
+    
+    
+    
+    
+
+    <link as="script" href="https://assets-cdn.github.com/assets/frameworks-d788212915194925ff3d2ef2cfbaec5dc1333d76cdb222ff551bc0a8c9a23172.js" rel="preload" />
+    
+    <link as="script" href="https://assets-cdn.github.com/assets/github-60427945fb3a23bc232ceee1b89ce28cfa14a19de48dbe75a849af968fa3fa48.js" rel="preload" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    
+    <title>libretro/gpsp: gpSP for libretro.</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars3.githubusercontent.com/u/1812827?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="libretro/gpsp" name="twitter:title" /><meta content="gpsp - gpSP for libretro." name="twitter:description" />
+      <meta content="https://avatars3.githubusercontent.com/u/1812827?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="libretro/gpsp" property="og:title" /><meta content="https://github.com/libretro/gpsp" property="og:url" /><meta content="gpsp - gpSP for libretro." property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTg0MjUyMTE6YTllOWMwZTE5YzU0NzVjYmRjMjRjNDYxZmEwYTNkZjE6MjZmZDkzOTAxY2QzYzA0NDk0YjU1ZDgwZmJiMmUzM2E4ZTUyNzU2MTg2MmU3MzVjZmNlZTc0MGVkNWVhZTk4YQ==--7be0cc7992284f7277a1d61c99ba00aeef100252">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="CF0FC3A2:50DB:1EDD3E:5755A350" name="octolytics-dimension-request_id" /><meta content="18425211" name="octolytics-actor-id" /><meta content="Kbrea1" name="octolytics-actor-login" /><meta content="d67610f8d7d91f210a3da52340974624515b34d8d0ade8f56c8f954263e0eb5c" name="octolytics-actor-hash" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="Kbrea1">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="NmIwYjE5NDc5YzhjYzAwOWNiNDE0YWEwOWMxN2EwZWJkZmExYzdhYTliNjc5NTE1OWFkZGJmOWE4MzAzZTM0Ynx7InJlbW90ZV9hZGRyZXNzIjoiMjA3LjE1LjE5NS4xNjIiLCJyZXF1ZXN0X2lkIjoiQ0YwRkMzQTI6NTBEQjoxRUREM0U6NTc1NUEzNTAiLCJ0aW1lc3RhbXAiOjE0NjUyMzAxNjF9">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="d7d49115ae771f176ed706bf484559955ecb9ad2">
+    <meta content="768b7acf549bf2f6ba1c8d71965583c88f44a31c" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="5d616bdfd471a893d0a60921cb5cc7cd">
+    
+
+      
+  <meta name="description" content="gpsp - gpSP for libretro.">
+  <meta name="go-import" content="github.com/libretro/gpsp git https://github.com/libretro/gpsp.git">
+
+  <meta content="1812827" name="octolytics-dimension-user_id" /><meta content="libretro" name="octolytics-dimension-user_login" /><meta content="17389228" name="octolytics-dimension-repository_id" /><meta content="libretro/gpsp" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="true" name="octolytics-dimension-repository_is_fork" /><meta content="8578259" name="octolytics-dimension-repository_parent_id" /><meta content="notaz/gpsp" name="octolytics-dimension-repository_parent_nwo" /><meta content="8578259" name="octolytics-dimension-repository_network_root_id" /><meta content="notaz/gpsp" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/libretro/gpsp/commits/master.atom" rel="alternate" title="Recent Commits to gpsp:master" type="application/atom+xml">
+
+
+      <link rel="canonical" href="https://github.com/libretro/gpsp" data-pjax-transient>
+  </head>
+
+
+  <body class="logged-in   env-production  vis-public fork">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+        <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="28" version="1.1" viewBox="0 0 16 16" width="28"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+</a>
+
+
+        <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/libretro/gpsp/search" class="js-site-search-form" data-scoped-search-url="/libretro/gpsp/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        tabindex="1"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+    
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <svg aria-hidden="true" class="octicon octicon-plus left" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="libretro/gpsp">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/libretro/gpsp/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/Kbrea1"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@Kbrea1" class="avatar" height="20" src="https://avatars2.githubusercontent.com/u/18425211?v=3&amp;s=40" width="20" />
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">Kbrea1</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/Kbrea1" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+          <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+            Explore
+          </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TPLOOl76aTQDkxANmgy5sLtZ7gfbnDqzUcHv9lxvEaIJEXnSpkw4BL1+I2OPjErybruJsxpUf1oa0cO5sMHkmw==" /></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WKD+Ef9Gp+B+g4arvx65VswSVdLj0RzTfeXcWR4fUXFjtXkl1tCBA/zPR+Zpt7RVTHE8p04RIvs1pXsJ0shDTQ==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="17389228" />
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/libretro/gpsp/subscription"
+            class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+            data-ga-click="Repository, click Watch settings, action:files#disambiguate">
+            <span class="js-select-button">
+              <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+              Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count" href="/libretro/gpsp/watchers">
+            9
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8 2.81v10.38c0 0.67-0.81 1-1.28 0.53L3 10H1c-0.55 0-1-0.45-1-1V7c0-0.55 0.45-1 1-1h2l3.72-3.72c0.47-0.47 1.28-0.14 1.28 0.53z m7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06 1.97 1.97-1.97 1.97 1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06-1.97-1.97 1.97-1.97z"></path></svg>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/libretro/gpsp/unstar" class="starred" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="YUkc9IrkSgKr0GWn+efkkeykdvtW08/QvM42qCgHn20mNzAn7Rhds9BgIRLJnFlMVpx6JkMd3xaMW+IrloOJ+A==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar libretro/gpsp"
+        data-ga-click="Repository, click unstar button, action:files#disambiguate; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/libretro/gpsp/stargazers">
+          6
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/libretro/gpsp/star" class="unstarred" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="m6yWzcck/hI8vBVpA+PR8jQq9uBcAsaNve2isFI1RmhMHd2ajeniUoLgSbOPMrFVbofwsXTa14ojAUnd8q6CNA==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star libretro/gpsp"
+        data-ga-click="Repository, click star button, action:files#disambiguate; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/libretro/gpsp/stargazers">
+          6
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/libretro/gpsp/fork" class="btn-with-count" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="uVxDxBL7mfh+V+8DFeXj5TgSPRfaRKPoahTU8mfFgwXCE35xf7ACcfZg3T+49X9xftBkjeyQ4Zc2SUeUsHjE+w==" /></div>
+            <button
+                type="submit"
+                class="btn btn-sm btn-with-count"
+                data-ga-click="Repository, show fork modal, action:files#disambiguate; text:Fork"
+                title="Fork your own copy of libretro/gpsp to your account"
+                aria-label="Fork your own copy of libretro/gpsp to your account">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path d="M8 1c-1.11 0-2 0.89-2 2 0 0.73 0.41 1.38 1 1.72v1.28L5 8 3 6v-1.28c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v1.78l3 3v1.78c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V9.5l3-3V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2zM2 4.2c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3 10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3-10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+              Fork
+            </button>
+</form>
+    <a href="/libretro/gpsp/network" class="social-count">
+      12
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path d="M8 1c-1.11 0-2 0.89-2 2 0 0.73 0.41 1.38 1 1.72v1.28L5 8 3 6v-1.28c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v1.78l3 3v1.78c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V9.5l3-3V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2zM2 4.2c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3 10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3-10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+  <span class="author" itemprop="author"><a href="/libretro" class="url fn" rel="author">libretro</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/libretro/gpsp" data-pjax="#js-repo-pjax-container">gpsp</a></strong>
+
+    <span class="fork-flag">
+      <span class="text">forked from <a href="/notaz/gpsp">notaz/gpsp</a></span>
+    </span>
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/libretro/gpsp" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /libretro/gpsp" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M9.5 3l-1.5 1.5 3.5 3.5L8 11.5l1.5 1.5 4.5-5L9.5 3zM4.5 3L0 8l4.5 5 1.5-1.5L2.5 8l3.5-3.5L4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/libretro/gpsp/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /libretro/gpsp/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7S10.14 13.7 7 13.7 1.3 11.14 1.3 8s2.56-5.7 5.7-5.7m0-1.3C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7S10.86 1 7 1z m1 3H6v5h2V4z m0 6H6v2h2V10z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">12</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/libretro/gpsp/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /libretro/gpsp/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28c0-1.73 0-6.28 0-6.28-0.03-0.78-0.34-1.47-0.94-2.06s-1.28-0.91-2.06-0.94c0 0-1.02 0-1 0V0L4 3l3 3V4h1c0.27 0.02 0.48 0.11 0.69 0.31s0.3 0.42 0.31 0.69v6.28c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72z m-1 2.92c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2zM4 3c0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72 0 1.55 0 5.56 0 6.56-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V4.72c0.59-0.34 1-0.98 1-1.72z m-0.8 10c0 0.66-0.55 1.2-1.2 1.2s-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2z m-1.2-8.8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a href="/libretro/gpsp/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /libretro/gpsp/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M2 5h4v1H2v-1z m0 3h4v-1H2v1z m0 2h4v-1H2v1z m11-5H9v1h4v-1z m0 2H9v1h4v-1z m0 2H9v1h4v-1z m2-6v9c0 0.55-0.45 1-1 1H8.5l-1 1-1-1H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h5.5l1 1 1-1h5.5c0.55 0 1 0.45 1 1z m-8 0.5l-0.5-0.5H1v9h6V3.5z m7-0.5H8.5l-0.5 0.5v8.5h6V3z"></path></svg>
+      Wiki
+</a>
+
+  <a href="/libretro/gpsp/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /libretro/gpsp/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0V10h3.6L4.5 8.2l0.9 5.4L9 8.5l1.6 1.5H14V8H11.5z"></path></svg>
+    Pulse
+</a>
+  <a href="/libretro/gpsp/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /libretro/gpsp/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M16 14v1H0V0h1v14h15z m-11-1H3V8h2v5z m4 0H7V3h2v10z m4 0H11V6h2v7z"></path></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+<div class="repository-meta js-details-container">
+  <span class="repository-meta-content">
+        <span itemprop="about"> gpSP for libretro.</span>
+  </span>
+
+</div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/libretro/gpsp/commits/master">
+            <svg aria-hidden="true" class="octicon octicon-history" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M8 13H6V6h5v2H8v5zM7 1c-2.19 0-4.13 1.02-5.41 2.59L0 2v4h4l-1.5-1.5c1.05-1.33 2.67-2.2 4.5-2.2 3.14 0 5.7 2.56 5.7 5.7S10.14 13.7 7 13.7 1.3 11.14 1.3 8c0-0.34 0.03-0.67 0.09-1H0.08c-0.05 0.33-0.08 0.66-0.08 1 0 3.86 3.14 7 7 7s7-3.14 7-7S10.86 1 7 1z"></path></svg>
+            <span class="num text-emphasized">
+              274
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/libretro/gpsp/branches">
+          <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+          <span class="num text-emphasized">
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/libretro/gpsp/releases">
+          <svg aria-hidden="true" class="octicon octicon-tag" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M6.73 2.73c-0.47-0.47-1.11-0.73-1.77-0.73H2.5C1.13 2 0 3.13 0 4.5v2.47c0 0.66 0.27 1.3 0.73 1.77l6.06 6.06c0.39 0.39 1.02 0.39 1.41 0l4.59-4.59c0.39-0.39 0.39-1.02 0-1.41L6.73 2.73zM1.38 8.09c-0.31-0.3-0.47-0.7-0.47-1.13V4.5c0-0.88 0.72-1.59 1.59-1.59h2.47c0.42 0 0.83 0.16 1.13 0.47l6.14 6.13-4.73 4.73L1.38 8.09z m0.63-4.09h2v2H2V4z"></path></svg>
+          <span class="num text-emphasized">
+            0
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+          <a href="/libretro/gpsp/graphs/contributors">
+  <svg aria-hidden="true" class="octicon octicon-organization" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M4.75 4.95c0.55 0.64 1.34 1.05 2.25 1.05s1.7-0.41 2.25-1.05c0.34 0.63 1 1.05 1.75 1.05 1.11 0 2-0.89 2-2s-0.89-2-2-2c-0.41 0-0.77 0.13-1.08 0.33C9.61 1 8.42 0 7 0S4.39 1 4.08 2.33c-0.31-0.2-0.67-0.33-1.08-0.33-1.11 0-2 0.89-2 2s0.89 2 2 2c0.75 0 1.41-0.42 1.75-1.05z m5.2-1.52c0.2-0.38 0.59-0.64 1.05-0.64 0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.17-0.53-1.19-1.17c0.06-0.19 0.11-0.39 0.14-0.59zM7 0.98c1.11 0 2.02 0.91 2.02 2.02s-0.91 2.02-2.02 2.02-2.02-0.91-2.02-2.02S5.89 0.98 7 0.98zM3 5.2c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2c0.45 0 0.84 0.27 1.05 0.64 0.03 0.2 0.08 0.41 0.14 0.59-0.02 0.64-0.53 1.17-1.19 1.17z m10 0.8H1c-0.55 0-1 0.45-1 1v3c0 0.55 0.45 1 1 1v2c0 0.55 0.45 1 1 1h1c0.55 0 1-0.45 1-1v-1h1v3c0 0.55 0.45 1 1 1h2c0.55 0 1-0.45 1-1V12h1v1c0 0.55 0.45 1 1 1h1c0.55 0 1-0.45 1-1V11c0.55 0 1-0.45 1-1V7c0-0.55-0.45-1-1-1zM3 13h-1V10H1V7h2v6z m7-2h-1V9h-1v6H6V9h-1v2h-1V7h6v4z m3-1h-1v3h-1V7h2v3z"></path></svg>
+    <span class="num text-emphasized">
+      8
+    </span>
+    contributors
+</a>
+
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/libretro/gpsp/search?l=c"  data-ga-click="Repository, language stats search click, location:repo overview">
+                <span class="color-block language-color" style="background-color:#555555;"></span>
+                <span class="lang">C</span>
+                <span class="percent">90.1%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/libretro/gpsp/search?l=nasm"  data-ga-click="Repository, language stats search click, location:repo overview">
+                <span class="color-block language-color" style="background-color:#6E4C13;"></span>
+                <span class="lang">Assembly</span>
+                <span class="percent">9.0%</span>
+              </a>
+          </li>
+          <li>
+              <span class="other">
+                <span class="color-block language-color" style="background-color:#ededed;"></span>
+                <span class="lang">Other</span>
+                <span class="percent">0.9%</span>
+              </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details" data-ga-click="Repository, language bar stats toggle, location:repo overview">
+    <span class="language-color" aria-label="C 90.1%" style="width:90.1%; background-color:#555555;" itemprop="keywords">C</span>
+    <span class="language-color" aria-label="Assembly 9.0%" style="width:9.0%; background-color:#6E4C13;" itemprop="keywords">Assembly</span>
+    <span class="language-color" aria-label="Other 0.9%" style="width:0.9%; background-color:#ededed;" itemprop="keywords">Other</span>
+  </div>
+
+  <include-fragment src="/libretro/gpsp/show_partial?partial=tree%2Frecently_touched_branches_list"></include-fragment>
+
+<div class="file-navigation in-mid-page">
+
+    <div class="select-menu get-repo-select-menu js-menu-container right select-menu-modal-right">
+  <button class="btn btn-sm btn-primary select-menu-button js-menu-target"
+    title="Clone or download this repository"
+    type="button" aria-label="Clone or download this repository" tabindex="0" aria-haspopup="true">
+    <span>Clone or download</span>
+  </button>
+
+  <div class="select-menu-modal-holder dropdown-menu-content js-menu-content" aria-hidden="true">
+    <div class="get-repo-modal dropdown-menu dropdown-menu-sw pb-0 js-toggler-container ">
+      <div class="clone-options https-clone-options">
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="waHwpd0ffM+I9uF8lZ1oLdJxRGKYAjmT+evzAZD7L0oRCx5C8xGPfCLT0tfq/Q1Ut25mQ2IjkxYd5p64J7x+VA==" /></div><button class="btn-link btn-change-protocol js-toggler-target right" type="submit">Use SSH</button></form>
+
+        <h4 class="mb-2">
+          Clone with HTTPS
+          <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank">
+            <svg aria-hidden="true" class="octicon octicon-question" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M6 10h2v2H6V10z m4-3.5c0 2.14-2 2.5-2 2.5H6c0-0.55 0.45-1 1-1h0.5c0.28 0 0.5-0.22 0.5-0.5v-1c0-0.28-0.22-0.5-0.5-0.5h-1c-0.28 0-0.5 0.22-0.5 0.5v0.5H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7S10.14 13.7 7 13.7 1.3 11.14 1.3 8s2.56-5.7 5.7-5.7m0-1.3C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7S10.86 1 7 1z"></path></svg>
+          </a>
+        </h4>
+        <p class="mb-1 get-repo-decription-text">
+          Use Git or checkout with SVN using the web URL.
+        </p>
+
+        <div class="input-group js-zeroclipboard-container">
+  <input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="https://github.com/libretro/gpsp.git" aria-label="Clone this repository at https://github.com/libretro/gpsp.git" readonly>
+  <div class="input-group-button">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M2 12h4v1H2v-1z m5-6H2v1h5v-1z m2 3V7L6 10l3 3V11h5V9H9z m-4.5-1H2v1h2.5v-1zM2 11h2.5v-1H2v1z m9 1h1v2c-0.02 0.28-0.11 0.52-0.3 0.7s-0.42 0.28-0.7 0.3H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h3C4 0.89 4.89 0 6 0s2 0.89 2 2h3c0.55 0 1 0.45 1 1v5h-1V5H1v9h10V12zM2 4h8c0-0.55-0.45-1-1-1h-1c-0.55 0-1-0.45-1-1s-0.45-1-1-1-1 0.45-1 1-0.45 1-1 1h-1c-0.55 0-1 0.45-1 1z"></path></svg></button>
+  </div>
+</div>
+
+      </div>
+
+      <div class="clone-options ssh-clone-options">
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=https&amp;protocol_type=clone" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="yS10PZDaWSHGKkaV2Ye051MZI+rkMlEfSR58XM01kbYgUM1sOb9UyH0Yhim2whTKm6Yq4ZWYozoOEvmLoOEwNw==" /></div><button class="btn-link btn-change-protocol js-toggler-target right" type="submit">Use HTTPS</button></form>
+
+        <h4 class="mb-2">
+          Clone with SSH
+          <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank">
+            <svg aria-hidden="true" class="octicon octicon-question" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M6 10h2v2H6V10z m4-3.5c0 2.14-2 2.5-2 2.5H6c0-0.55 0.45-1 1-1h0.5c0.28 0 0.5-0.22 0.5-0.5v-1c0-0.28-0.22-0.5-0.5-0.5h-1c-0.28 0-0.5 0.22-0.5 0.5v0.5H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7S10.14 13.7 7 13.7 1.3 11.14 1.3 8s2.56-5.7 5.7-5.7m0-1.3C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7S10.86 1 7 1z"></path></svg>
+          </a>
+        </h4>
+        <p class="mb-1 get-repo-decription-text">
+          Use an SSH key and passphrase from account.
+        </p>
+
+        <div class="input-group js-zeroclipboard-container">
+  <input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="git@github.com:libretro/gpsp.git" aria-label="Clone this repository at git@github.com:libretro/gpsp.git" readonly>
+  <div class="input-group-button">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M2 12h4v1H2v-1z m5-6H2v1h5v-1z m2 3V7L6 10l3 3V11h5V9H9z m-4.5-1H2v1h2.5v-1zM2 11h2.5v-1H2v1z m9 1h1v2c-0.02 0.28-0.11 0.52-0.3 0.7s-0.42 0.28-0.7 0.3H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h3C4 0.89 4.89 0 6 0s2 0.89 2 2h3c0.55 0 1 0.45 1 1v5h-1V5H1v9h10V12zM2 4h8c0-0.55-0.45-1-1-1h-1c-0.55 0-1-0.45-1-1s-0.45-1-1-1-1 0.45-1 1-0.45 1-1 1h-1c-0.55 0-1 0.45-1 1z"></path></svg></button>
+  </div>
+</div>
+
+      </div>
+
+      <div class="mt-2">
+        
+<a href="/libretro/gpsp/archive/master.zip"
+   class="btn btn-outline get-repo-btn
+"
+   rel="nofollow"
+   data-ga-click="Repository, download zip, location:repo overview">
+  Download ZIP
+</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="btn-group right">
+      
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/libretro/gpsp/new/master" class="btn-group-form" data-form-nonce="768b7acf549bf2f6ba1c8d71965583c88f44a31c" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="os12cy+ObvzfQA4YJ8oSlQ++ZcHgyLiEF6jClbSxCflK4hzI1/wNdqTWfiaMGiguyxdtIyEXt4cac97mbCnQjg==" /></div>
+    <button class="btn btn-sm" type="submit" data-disable-with="Creating file…">
+      Create new file
+    </button>
+</form>
+
+      <a href="/libretro/gpsp/upload/master" class="btn btn-sm">
+        Upload files
+      </a>
+
+    <a href="/libretro/gpsp/find/master"
+      class="btn btn-sm empty-icon right"
+      data-pjax
+      data-hotkey="t"
+      data-ga-click="Repository, find file, location:repo overview">
+      Find file
+    </a>
+  </div>
+
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/libretro/gpsp/tree/master"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text" title="master">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+      <a href="/libretro/gpsp/pull/new/master" class="btn btn-sm new-pull-request-btn" data-pjax data-ga-click="Repository, new pull request, location:repo overview">
+        New pull request
+      </a>
+
+  <div class="breadcrumb">
+    
+  </div>
+</div>
+
+
+
+  <div class="branch-infobar">
+    <span class="right">
+        <a class="muted-link" href="/libretro/gpsp/pull/new/master">
+          <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28c0-1.73 0-6.28 0-6.28-0.03-0.78-0.34-1.47-0.94-2.06s-1.28-0.91-2.06-0.94c0 0-1.02 0-1 0V0L4 3l3 3V4h1c0.27 0.02 0.48 0.11 0.69 0.31s0.3 0.42 0.31 0.69v6.28c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72z m-1 2.92c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2zM4 3c0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72 0 1.55 0 5.56 0 6.56-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V4.72c0.59-0.34 1-0.98 1-1.72z m-0.8 10c0 0.66-0.55 1.2-1.2 1.2s-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2z m-1.2-8.8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+          Pull request
+        </a>
+      <a class="muted-link" href="/libretro/gpsp/compare">
+        <svg aria-hidden="true" class="octicon octicon-diff" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M6 7h2v1H6v2h-1V8H3v-1h2V5h1v2zM3 13h5v-1H3v1z m4.5-11l3.5 3.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h6.5z m2.5 4L7 3H1v12h9V6zM8.5 0S3 0 3 0v1h5l4 4v8h1V4.5L8.5 0z"></path></svg>
+        Compare
+      </a>
+    </span>
+
+      This branch is 215 commits ahead of notaz:master.
+  </div>
+
+
+  <div class="commit-tease js-details-container">
+    <span class="right">
+      Latest commit
+      <a class="commit-tease-sha" href="/libretro/gpsp/commit/c11bdbce9928c98e9bbe3e9466024ee203072d25" data-pjax>
+        c11bdbc
+      </a>
+      <span itemprop="dateModified"><relative-time datetime="2016-05-26T00:19:40Z">May 26, 2016</relative-time></span>
+    </span>
+
+
+    <span class="commit-author-section">
+      <img alt="@twinaphex" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/1075274?v=3&amp;s=40" width="20" />
+      <a href="/twinaphex" class="user-mention" rel="contributor">twinaphex</a>
+    </span>
+
+        <a href="/libretro/gpsp/commit/c11bdbce9928c98e9bbe3e9466024ee203072d25" class="message" data-pjax="true" title="Merge pull request #24 from vanfanel/master
+
+Removed redundant CFLAG and added Rpi3 platform">Merge pull request</a> <a href="https://github.com/libretro/gpsp/pull/24" class="issue-link js-issue-link" data-url="https://github.com/libretro/gpsp/issues/24" data-id="156544088" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#24</a> <a href="/libretro/gpsp/commit/c11bdbce9928c98e9bbe3e9466024ee203072d25" class="message" data-pjax="true" title="Merge pull request #24 from vanfanel/master
+
+Removed redundant CFLAG and added Rpi3 platform">from vanfanel/master</a>
+          <span class="hidden-text-expander inline">
+            <button type="button" class="ellipsis-expander js-details-target">&hellip;</button>
+          </span>
+    </span>
+
+      <div class="commit-desc"><pre class="text-small">Removed redundant CFLAG and added Rpi3 platform</pre></div>
+  </div>
+
+
+<div class="file-wrap">
+
+  <a href="/libretro/gpsp/tree/c11bdbce9928c98e9bbe3e9466024ee203072d25" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.72 12.5l-6.85-11.98C8.69 0.21 8.36 0.02 8 0.02s-0.69 0.19-0.87 0.5l-6.85 11.98c-0.18 0.31-0.18 0.69 0 1C0.47 13.81 0.8 14 1.15 14h13.7c0.36 0 0.69-0.19 0.86-0.5S15.89 12.81 15.72 12.5zM9 12H7V10h2V12zM9 9H7V5h2V9z"></path></svg></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 4H7v-1c0-0.66-0.31-1-1-1H1c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1z m-7 0H1v-1h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/tree/master/3ds" class="js-navigation-open" id="7ae8ccb1937cf50c42940e4092741492-a5e08c28427416de1076da79bb24ae012c78cbdf" title="3ds">3ds</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/4b00c74784ad607fb62220ef27c79b12bc6d7678" class="message" data-pjax="true" title="(3DS) remove the now unused libkhax.">(3DS) remove the now unused libkhax.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-01-18T00:00:56Z">Jan 18, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 4H7v-1c0-0.66-0.31-1-1-1H1c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1z m-7 0H1v-1h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/tree/master/arm" class="js-navigation-open" id="f926b3e222d7afee57071b2256839701-97e956c2a75f1b6f55d3df7bf4cded58cec826f8" title="arm">arm</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/dd86f4df9ad798f04da5dacf8a6a14cd1e239cfd" class="message" data-pjax="true" title="Add MSB_FIRST ifdefs">Add MSB_FIRST ifdefs</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-07-30T01:01:40Z">Jul 30, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 4H7v-1c0-0.66-0.31-1-1-1H1c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1z m-7 0H1v-1h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/tree/master/jni" class="js-navigation-open" id="9e50b36bb2497496c6398461a2082fcc-a6abef23197033671e58cb909d5532659f17bc24" title="jni">jni</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/c78a0dd39b5a65d73a8d5eb462918e1b28847a7b" class="message" data-pjax="true" title="(Android) For Android x86 build - try to use mmap, for Android - use ARM_MEMORY_DYNAREC
+codepath">(Android) For Android x86 build - try to use mmap, for Android - use …</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-11T00:38:47Z">Dec 11, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 4H7v-1c0-0.66-0.31-1-1-1H1c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1z m-7 0H1v-1h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/tree/master/libco" class="js-navigation-open" id="3f3efd9269c83e05b7cce1c8fc05e0b4-e81edf47dfcb6cd8daa365f1614898e2c94a8fc2" title="libco">libco</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/bda151e3887c2d44295b38d6582876365b15caa2" class="message" data-pjax="true" title="Silence libco/amd64.c warning">Silence libco/amd64.c warning</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-10T16:58:56Z">Dec 10, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 4H7v-1c0-0.66-0.31-1-1-1H1c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1z m-7 0H1v-1h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/tree/master/psp" class="js-navigation-open" id="95d52d58778762c70ae3328bb07d8a3d-75064edb2b6d9ede781d98c108b14426090a0568" title="psp">psp</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/5b59ef3acc721639ebc1c78ab42fe64f4e30ab6d" class="message" data-pjax="true" title="Reimplement cache invalidation code">Reimplement cache invalidation code</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-11T17:47:48Z">Dec 11, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 4H7v-1c0-0.66-0.31-1-1-1H1c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1z m-7 0H1v-1h5v1z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/tree/master/x86" class="js-navigation-open" id="8a9da7865483c5fd359f3acef178d26d-c6de0ae279733c5ee051d861550eefaae02a7d7c" title="x86">x86</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/d10c4afea252e0eb714fc5367e49bca5c6142c07" class="message" data-pjax="true" title="Get rid of function_cc">Get rid of function_cc</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-20T08:14:38Z">Dec 20, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/.gitignore" class="js-navigation-open" id="a084b794bc0759e7a6b77810e01874f2-bf5c80b9db1881db8e6c500aa8f2c2ec7395d5b6" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/eb3668fc5dab138073cd4844208ac05b94086a4a" class="message" data-pjax="true" title="initial pandora port, with hardware scaling and stuff">initial pandora port, with hardware scaling and stuff</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2011-09-05T21:18:01Z">Sep 6, 2011</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/COPYING" class="js-navigation-open" id="7116ef0705885343c9e1b2171a06be0e-d159169d1050894d3ea3b98e1c965c4058208fe1" itemprop="license" title="COPYING">COPYING</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/209d97e0cc4973b38a0b118e15bcc48e6aa0c34a" class="message" data-pjax="true" title="Avoid proprietary format in copying, HAVE_DYNAREC in armv.">Avoid proprietary format in copying, HAVE_DYNAREC in armv.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-13T22:58:09Z">Dec 13, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/Makefile" class="js-navigation-open" id="b67911656ef5d18c4ae36cb6741b7965-bfd43fcde7728cff9e85ceb06c15d4b4786c99e7" title="Makefile">Makefile</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/9dbea7573e6e78ffb880f907a0c86aa1bafc856f" class="message" data-pjax="true" title="Removed redundant CFLAG and added Rpi3 platform">Removed redundant CFLAG and added Rpi3 platform</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-05-24T15:52:00Z">May 24, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/Makefile.common" class="js-navigation-open" id="1c2b8e7c48acf6b44215acf450579143-312b18b24d7587ee8dcefe5181c4fc35ecbd931f" title="Makefile.common">Makefile.common</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/cf973d0c5f3e7878500739e3f4484df84f66dacb" class="message" data-pjax="true" title="Rename cpu_orig.c to cpu.c">Rename cpu_orig.c to cpu.c</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-14T01:51:43Z">Dec 14, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/build.txt" class="js-navigation-open" id="c6b81534742a2dc9bc0ca2c5852ee7f2-0d612164039578c5831cf6b83b90373f9eef8446" title="build.txt">build.txt</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/2823a4c8196a02da86ee180cf55586d4e8c91a2f" class="message" data-pjax="true" title="original source from gpsp09-2xb_src.tar.bz2">original source from gpsp09-2xb_src.tar.bz2</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2009-05-21T15:48:31Z">May 21, 2009</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/cheats.c" class="js-navigation-open" id="4c2baef562a97a6508f8baed7a37c4c0-f3e79e45f6eb98121717b194daa80d6e67e811a4" title="cheats.c">cheats.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/7a0b0cba45912646677539ad905ba4db83d6936b" class="message" data-pjax="true" title="Style nits">Style nits</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-10T14:47:19Z">Dec 10, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/cheats.h" class="js-navigation-open" id="a3fb4d0441373384d969f536fb1f8258-e25ad73757306794213d99a1eb32ce5e5374b924" title="cheats.h">cheats.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/7a0b0cba45912646677539ad905ba4db83d6936b" class="message" data-pjax="true" title="Style nits">Style nits</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-10T14:47:19Z">Dec 10, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/common.h" class="js-navigation-open" id="32f5bec80fb31433871b09021cec741d-8b1df6bbda8e10e880d547d17ba0d948468b3527" title="common.h">common.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/d10c4afea252e0eb714fc5367e49bca5c6142c07" class="message" data-pjax="true" title="Get rid of function_cc">Get rid of function_cc</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-20T08:14:38Z">Dec 20, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/control" class="js-navigation-open" id="fc5364bf9dbfa34954526becad136d4b-f994fb1cb37a0e3b3c1ff09ac56b256f6fe94531" title="control">control</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/f66824b7e53fd1ea0534577e24c078a4912d7dd1" class="message" data-pjax="true" title="(Theos iOS) Add Theos iOS target">(Theos iOS) Add Theos iOS target</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-23T07:58:58Z">Dec 23, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/cpu.c" class="js-navigation-open" id="acf127fc1b384eb8a9e97212b85a46a1-c555c0b277d4c774c03cfc7d00dcce8a7df5e58b" title="cpu.c">cpu.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/4036107852c0f3fbf608fac2816f466d32a4a9c5" class="message" data-pjax="true" title="Prevent bunch of warnings">Prevent bunch of warnings</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-07-26T02:44:17Z">Jul 26, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/cpu.h" class="js-navigation-open" id="16282154579584693c2066c80433097a-d2926219bf2323bf3a10afe33927a4de6604fe3b" title="cpu.h">cpu.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/f1d14fbe7ce749b613ee2f7071cdfff1de013152" class="message" data-pjax="true" title="(3ds) dynarec: map the translation caches to specific addresses at
+runtime, increases compatibility with loaders that can reloacate each
+program section seperately.
+move the svc enabling functions to the frontend.">(3ds) dynarec: map the translation caches to specific addresses at</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-11-04T14:46:27Z">Nov 4, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/cpu_threaded.c" class="js-navigation-open" id="ced697711d9a9ec133cdd303f0d4d30b-44f5d841e9d0c178f70f1a3c1d08d009060887c9" title="cpu_threaded.c">cpu_threaded.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/f1d14fbe7ce749b613ee2f7071cdfff1de013152" class="message" data-pjax="true" title="(3ds) dynarec: map the translation caches to specific addresses at
+runtime, increases compatibility with loaders that can reloacate each
+program section seperately.
+move the svc enabling functions to the frontend.">(3ds) dynarec: map the translation caches to specific addresses at</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-11-04T14:46:27Z">Nov 4, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/game_config.txt" class="js-navigation-open" id="9d64cc11f262a1c34abd08154b22eaa4-7c8cea4c17654a0bc85e5393460dfcd776288e3f" title="game_config.txt">game_config.txt</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/95f4781b1ebfa7fd58733c17d31345332439e1d9" class="message" data-pjax="true" title="Complete gba_over.h">Complete gba_over.h</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-28T15:52:17Z">Dec 28, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/gba_memory.c" class="js-navigation-open" id="a0c923b75e83294eb8b47e353ea6f3cd-15ad80809002de2e84d163f62c36e5730cf105b9" title="gba_memory.c">gba_memory.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/65ff54ff4e6ff811246c0e106d45571a30762e74" class="message" data-pjax="true" title="fix sram not saving on some platforms.">fix sram not saving on some platforms.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-09-20T22:42:37Z">Sep 20, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/gba_memory.h" class="js-navigation-open" id="1dbefe518cfd51f88228f5f1d5e0edfb-630c622251709d5c261d73b90150dbbd5713b70b" title="gba_memory.h">gba_memory.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/d10c4afea252e0eb714fc5367e49bca5c6142c07" class="message" data-pjax="true" title="Get rid of function_cc">Get rid of function_cc</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-20T08:14:38Z">Dec 20, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/gba_over.h" class="js-navigation-open" id="832c41e724ca97c77b73df4e7ff59832-d59cfd9bf643840a21eabbc47c57484e1d293a0a" title="gba_over.h">gba_over.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/95f4781b1ebfa7fd58733c17d31345332439e1d9" class="message" data-pjax="true" title="Complete gba_over.h">Complete gba_over.h</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-28T15:52:17Z">Dec 28, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/input.c" class="js-navigation-open" id="8a39c51d28caad2ea5ee8ccc87680cbb-f4ab6e888f8890d87dfda009077eee5a2ec8e7d1" title="input.c">input.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/6ddc6f494d4caac06b163300cec2119f1384e2bb" class="message" data-pjax="true" title="Turn two functions static">Turn two functions static</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-13T04:01:02Z">Dec 13, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/input.h" class="js-navigation-open" id="ec00cf718aa1487a52b258c4f2bb9fd7-f99328a5cd0197a177ef2919490380bd709ef298" title="input.h">input.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/d5075185eff7e680839755b1528a413cac7bbfd4" class="message" data-pjax="true" title="Update input.h
+
+Extra L and R keys useful for certain games (specially fighting ones)">Update input.h</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-23T13:00:28Z">Dec 23, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/libco.h" class="js-navigation-open" id="32650fc19b0fdf8aaa5e9c9c09dde14e-14648045065ed4962a575559603c55ef5a7e3292" title="libco.h">libco.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/365077772d3d8d5d479febd0388d7e74ef08d508" class="message" data-pjax="true" title="start implementing the libretro interface. (not working yet)">start implementing the libretro interface. (not working yet)</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-08T21:56:33Z">Dec 8, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/libretro.c" class="js-navigation-open" id="52976fe74a1572089032df837f0630a3-983a8269c8db7aa90143dcbe00d29e7afc95f09b" title="libretro.c">libretro.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/f1d14fbe7ce749b613ee2f7071cdfff1de013152" class="message" data-pjax="true" title="(3ds) dynarec: map the translation caches to specific addresses at
+runtime, increases compatibility with loaders that can reloacate each
+program section seperately.
+move the svc enabling functions to the frontend.">(3ds) dynarec: map the translation caches to specific addresses at</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-11-04T14:46:27Z">Nov 4, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/libretro.h" class="js-navigation-open" id="c531fc5ec7cb3d4d4c4f502b1ec1a76e-16c274a1a9d1a8e11f87ad38539be3615c62d051" title="libretro.h">libretro.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/365077772d3d8d5d479febd0388d7e74ef08d508" class="message" data-pjax="true" title="start implementing the libretro interface. (not working yet)">start implementing the libretro interface. (not working yet)</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-08T21:56:33Z">Dec 8, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/link.T" class="js-navigation-open" id="d358bb3afda4a9431143ad5043a8473c-a90d3a80b2050b3d8767d6c0bad0ca4c73f41326" title="link.T">link.T</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/38158f67e2d8a9c8c43b3b3598a56f3d86a727f8" class="message" data-pjax="true" title="show undefined referances.
+add link.T">show undefined referances.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-09T00:00:31Z">Dec 9, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/main.c" class="js-navigation-open" id="2045016cb90d1e65d71c2407a2570927-bc8a408ec9414192d4db279cf4dc924189fb32e0" title="main.c">main.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/5ebf76a41fbc2c250cafd519748a9ad141b81fe4" class="message" data-pjax="true" title="Provide two comments">Provide two comments</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-11T01:32:14Z">Dec 11, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/main.h" class="js-navigation-open" id="23cfe05393c8433e384d2c385f06ab93-f34d7db6fc724c370b02f903e56c220a8779a0fe" title="main.h">main.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/5e55f00fd10c78d3d98ba6241bce2d49fa428d45" class="message" data-pjax="true" title="Cleanups">Cleanups</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-07-30T01:07:03Z">Jul 30, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/memmap.h" class="js-navigation-open" id="c3acffd34086c7cf59024290f9ed1fe0-e80d720d24665abc0603b3f6a4998329d0f9bf5f" title="memmap.h">memmap.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/5820d8be949f175ccafe2770295d99c3132056c5" class="message" data-pjax="true" title="Create memmap_win32.c for Win32 systems - a mman wrapper">Create memmap_win32.c for Win32 systems - a mman wrapper</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-13T04:50:15Z">Dec 13, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/memmap_win32.c" class="js-navigation-open" id="13ed91a7199dbf13d2661b7d85b7d2b8-f4dbdd613b5726a14e9098a5773ced5c8498f371" title="memmap_win32.c">memmap_win32.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/5820d8be949f175ccafe2770295d99c3132056c5" class="message" data-pjax="true" title="Create memmap_win32.c for Win32 systems - a mman wrapper">Create memmap_win32.c for Win32 systems - a mman wrapper</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-13T04:50:15Z">Dec 13, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/readme.txt" class="js-navigation-open" id="eb6b6c90251ab33cee784713c451e6d8-15bf6fd6b143b79975e59feccc01895d05bffe8d" title="readme.txt">readme.txt</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/2823a4c8196a02da86ee180cf55586d4e8c91a2f" class="message" data-pjax="true" title="original source from gpsp09-2xb_src.tar.bz2">original source from gpsp09-2xb_src.tar.bz2</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2009-05-21T15:48:31Z">May 21, 2009</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/sound.c" class="js-navigation-open" id="b2935235b7634bcbf68fc2d5a2dda1c2-126fb5db964b721ce67b8b8ae44201dee3214ac2" title="sound.c">sound.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/6ddc6f494d4caac06b163300cec2119f1384e2bb" class="message" data-pjax="true" title="Turn two functions static">Turn two functions static</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-13T04:01:02Z">Dec 13, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/sound.h" class="js-navigation-open" id="ca3f5b98c4d4e62640eb161b7d927fda-48f227fb7d7d24d51044e5085a080dfcf660863e" title="sound.h">sound.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/7a0b0cba45912646677539ad905ba4db83d6936b" class="message" data-pjax="true" title="Style nits">Style nits</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2014-12-10T14:47:19Z">Dec 10, 2014</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/video.c" class="js-navigation-open" id="c3067dc10d2346137213449d5983168e-48469e9f092d9460acf46b5bc74ab079aa2b87fe" title="video.c">video.c</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/f1d14fbe7ce749b613ee2f7071cdfff1de013152" class="message" data-pjax="true" title="(3ds) dynarec: map the translation caches to specific addresses at
+runtime, increases compatibility with loaders that can reloacate each
+program section seperately.
+move the svc enabling functions to the frontend.">(3ds) dynarec: map the translation caches to specific addresses at</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-11-04T14:46:27Z">Nov 4, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/libretro/gpsp/blob/master/video.h" class="js-navigation-open" id="6c22186423def94fa700b34008a8c471-0f21d19d69e5a2a8d1ea3b455e0d477daebcd156" title="video.h">video.h</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/libretro/gpsp/commit/69b5bfc05e5736bab2e8f78e4904f9028f0ab414" class="message" data-pjax="true" title="allocate gba_screen_pixels on the heap.
+use linearMemAlign for the 3DS target.">allocate gba_screen_pixels on the heap.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-04-13T01:43:42Z">Apr 13, 2015</time-ago></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+  <div id="readme" class="readme boxed-group clearfix announce instapaper_body txt">
+    <h3>
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M2 5h4v1H2v-1z m0 3h4v-1H2v1z m0 2h4v-1H2v1z m11-5H9v1h4v-1z m0 2H9v1h4v-1z m0 2H9v1h4v-1z m2-6v9c0 0.55-0.45 1-1 1H8.5l-1 1-1-1H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h5.5l1 1 1-1h5.5c0.55 0 1 0.45 1 1z m-8 0.5l-0.5-0.5H1v9h6V3.5z m7-0.5H8.5l-0.5 0.5v8.5h6V3z"></path></svg>
+      readme.txt
+    </h3>
+
+      <div class="plain"><pre>-- gameplaySP  Gameboy Advance emulator for Playstation Portable --
+
+
+-- Release log --
+
+v0.91 (minor cleanup release)
+
+NOTE: I don't usually do minor releases but I rewrote a ton of
+things in gpSP 0.9, much of it during the last few days, and although
+I spent a lot of time debugging a few bugs inevitably crept in.
+
+# Fixed some issues in the new memory handlers that crept up, hopefully
+  should fix the problems between 0.8 and 0.9.
+# Fixed a bug introduced in 0.9 that could cause crashes when selecting
+  things in the menu (I hope, at least).
+# Fixed a bug with a certain invalid opcode causing a jump to be scanned
+  when there isn't one (fixes Sabre Wulf).
+# Removed 2048 option for audio buffer.
+
+v0.9 (yes, it's still beta)
+
+NOTE: As some of you may be aware I'm pretty much tired of these
+unofficial releases by people (okay, mostly single person) who
+don't wish to follow my wishes. I'm in the process of asking this
+person to stop, in his own language. However, I want to make
+something clear. Look at the last six new features in this
+changelog. I added these TODAY. I could have done them at any
+time. But I didn't, because I spent many (dozens, quite possibly
+hundreds) hours debugging games that people want to play. I have
+always believed that this is far more important than spending time
+on new features. Frankly, I'm tired of my emulator being hacked on
+by other people, and if it doesn't stop I'm going to make this
+project closed source.
+
+Since I know this information is most visible when updated on the
+major sites, note that it is the news posters I am especially
+talking to. Next time you upload unofficial releases of my
+emulator (without even knowing what's changed) bear in mind that
+you're only encouraging me to stop working on this. If you want
+to pick sides between me and unofficial devs, be my guest. I'll
+let you decide by the contents of this release who's doing more
+for my emulator.
+
+Oh, and if you downloaded a version of gpSP that has more than
+"gpSP" in its name then you're using one of their versions. Shame
+on them for not even removing this threatening message, and shame
+on you. Unless you're using a port I endorse (GP2X, Dreamcast, etc),
+in which case everything's good.
+
+
+# Fixed stereo output being reversed.
+# Fixed a bug causing misaligned errors on 8bit writes to the gbc
+  audio channel 3 wave data (fixes various Super Robot Wars games)
+# Fixed DMA with garbage in their upper 4 bits (fixes a crash in
+  Zelda: Minish Cap)
+# Added double buffering to the rendering, removes line artifacts.
+  Big thanks to Brunni for the idea.
+# Fixed a bug preventing some SRAM based games from saving (fixes
+  MMBN4-6)
+# Fixed a bug causing part of EWRAM to potentially get corrupted if
+  code segments loaded in EWRAM cross 32KB boundaries (fixes
+  Phantasy Star 2)
+# Fixed a bug causing games using movs pc in user mode (very bad
+  behavior) to crash. Fixes Colin McRae Rally 2.0.
+# Improved timing a bit more. Fixes GTA Advance.
+# Fixed a sprite clipping bug (fixes crash in third boss of Zelda:
+  Minish cap)
+# Increased translation buffer size significantly (fixes Donkey Kong:
+  King of Swing)
+# Fixed a dynarec bug causing add pc, reg to not work in Thumb code
+  (fixes crash in DBZ:LoZ, seems to fix crashes in battle in Golden
+  Sun, probably fixes other games)
+# Made sprites using tiles &lt; 512 not display in modes 3-5 (fixes
+  a couple minor graphical bugs)
+# Removed abort on instruction 0x00000000 hack, was breaking a
+  certain bugged up game (Scurge)
+# Fixed bug in flags generating variable logical shifts (fixes
+  SD Gundam Force)
+# Fixed unaligned 16bit reads (fixes DBZ:LoZ in game)
+# Redid contiguous block flag modification checking AGAIN and
+  hopefully got it right this time (fixes Mario vs. Donkey Kong)
+# Redid ldm/stm instructions, fixing some cases (along with the
+  timing improvements fixes Mario &amp; Luigi)
+# Fixed 14bit EEPROM addressing (hopefully fixes saving in a lot
+  of games)
+# Completely redid memory handlers, accurately emulates open and
+  BIOS reads now. Fixes Zelda: Minish Cap (roll bug, last dungeon),
+  Rayman, MMBN 1 (last dungeon), probably others.
+# Fixed a minor graphical glitch on the edges of the screen
+  (thanks Brunni and hlide for the help!)
+# Fixed crash on loading savestates from files of games not currently
+  loaded, but be sure you have the exact file you loaded it from or
+  gpSP will exit.
+@ New memory handlers should provide performance boost for games
+  that access VRAM significantly (ie 3D games)
+@ Added dead flag elimination checking for logical shifts, probably
+  doesn't make a noticeable difference but should have been there
+  anyway.
++ Added rapidfire to the button mappings.
++ Added auto frameskip. Removed fractional frameskip (don't think
+  it's very useful with auto anyway). Select auto in the graphics/
+  sound menu to activate it; frameskip value will act as the
+  maximum (auto is by default on). Thanks again to Brunni for some
+  help with this. Frameskip options are game specific.
++ Added vsync to the rendering. Only occurs when frames aren't
+  skipped. Seems to reduce tearing at least some of the time.
++ Added non-filtered video option.
++ Cheat support (Gameshark/Pro Action Replay v1-v3 only), still
+  in early stages, doesn't support everything; codes may cause
+  the game to crash, haven't determined yet if the codes are bad
+  or the implementation is. See cheat section for more information.
++ Added ability to change audio buffer size. Does not take affect
+  until you restart the game.
++ Added analog config options.
++ Added ability to set analog sensitivity and turn off analog.
++ Added ability to change the clock speed. This is a game specific
+  option. Try lower speeds w/auto frameskip to save battery life.
++ Fixed savestate speed on crappy Sony sticks.
+
+(legend: # bug fix, + feature addition, @ optimization)
+
+v0.8 - ("unlocked" beta)
+
+NOTE 1: It has come to my attention that there are actually BIOSes
+out there that are being used that cause some games to not work.
+The BIOS md5sum listed here is for the BIOS actually in GBAs and
+is as accurate as you'll get, (if you have a GBA and a flashcart
+you can dump it yourself, see <a href="http://wiki.pocketheaven.com/GBA_BIOS">http://wiki.pocketheaven.com/GBA_BIOS</a>)
+
+NOTE 2: Since I know this is as far as a lot of people here I have a
+little request. Please, please, (I'd italicize this if I could)
+please stop constantly asking me when the next release will be,
+what it'll have, etc. And while you're at it, please stop asking me
+to implement wi-fi multiplayer, cheat support, or fix all of your
+games. Some things will happen in due time, other things might not
+ever happen. I devote about as much time as I can to this emulator
+and I carefully include as much as I can in releases to try to
+minimize the number of people who will nag me next time (erm, I
+mean, to make the most people happy), so I don't release every other
+day or anything like that. Sorry that I can't release once a week,
+but I'm a lot busier now than I was when I was first developing this
+emulator. Good thing I got the first version out before that, wasn't
+it?
+
+Congratulations, you made it this far! Now read the rest of the this
+thing. *_*
+
+
+# Fixed bug in dead flag elimination, "alt" version no longer needed.
+# Fixed EEPROM saves being saved as 32kb instead of 512bytes/8kb
++ 32MB ROM support has been added. ROMS are "demand loaded" as
+  necessary and page swapped out; there might be a small loading lag,
+  but I have yet to ever really notice anything.
+  NOTE: 32MB ROM support only works for unzipped ROMs.
++ Save states have been added. See the save state menu for save/load
+  options.
++ Support for the real-time clock (RTC) chip in Pokemon cartridegs
+  and other games. The implementation is based off of VBA's, whatever
+  notes on gbadev I could find, and some of my own reverse engineering
+  of what the games do... it might not be totally correct. Also,
+  setting the time does not work.
++ Per-game configuration. Currently this only saves frameskip and
+  frameskip variation options.
++ Removed the flash type option from the menu and instead added it
+  to game_config.txt. Hopefully got everything - let me know if you
+  find something that isn't there. It's pretty easy to add them if you
+  have to.
++ Added a display in the upper left-hand corner to indicate when
+  fast-forward is on.
++ Added button bindings for save/load state.
+@ Found a fix of StrmnNrmn proportion: far too much unnecessary mutex
+  synchronization was going on. Removing the two offending lines of
+  code gave a massive speed boost for free. Enjoy.
+
+v0.7 - (beta than ever)
+
+# Fixed a dynarec bug involving flags generating functions in
+  contiguous conditional blocks. Fixes music in Super Mario
+  Advance 2-4.
+# Fixed a dynarec bug where Thumb mov imm instructions wouldn't
+  set flags. Fixes Zelda: Minish Cap, Megaman Battle Network,
+  probably others. Comes at a slight speed cost.
+# Fixed a MIPS dynarec bug where some delay slots might not
+  get filled rarely, causing chaos. Don't know if it improves
+  any games.
+# Improved self-modifying code detection. Makes Golden Sun,
+  Golden Sun 2, and Madden 2007 sorta work but excrutiatingly
+  slowly. Looking for a game-specific workaround for this - if you
+  want to play these games you'll have to wait for now :(
+# Fixed a bug causing the interrupt disable flag to go down
+  when SWIs are entered, causing crashes/resets. Fixes
+  Super Mario Advance 2-4.
+# Fixed menu crashing when strings with certain characters are
+  printed (for instance going to the menu after loading the
+  BIOS)
+# Accidentally forgot to render win0 + win1 + objwin when all
+  active at the same time, many weeks ago. Added that, should fix
+  some parts in games that had frozen screens.
+# Fixed some issues with gpsp.cfg needing to be present and
+  corrupting, hopefully. At the very least sanity checks are
+  performed on the config file.
+# Made it so assigning the frameskip button to something besides
+  triangle actually worked as expected.
+# Fixed ability to restart current game if nothing is loaded
+  (ie, crash)
+# Added interrupt on cpsr modification support to the dynarec
+  (fixes backgrounds in Castlevania: Harmony of Dissonance)
+# Added open addressing for ldm/stm instructions (fixes
+  Super Mario Advance 3)
+# Improved cycle accuracy a little. Don't know of anything this
+  fixes, but games with idle loops will run a little better w/o
+  idle loop elimination (but should still be added when possible)
+# Fixed some bugs causing sound to play sometimes when it shouldn't.
+@ Added dead flag elimination for Thumb code. May possibly have
+  noticeable performance increases (Thumb emited coded size can
+  have a reduction of 20% or more)
+@ Added code generation for divide SWI. May have a small speed
+  increase in some games.
++ Added analog nub support (special thanks to psp298 for the
+  code)
++ Added fractional frameskip. Go below 0 to get them. A frameskip
+  of 1/2 for instance means render 2 out of every 3 frames, 2/3
+  means render 3 out of every 4 frames, etc. Possibly useful for
+  games that are not quite fast enough at fs0 but fullspeed at
+  fs1...
+
+v0.6 - (still beta quality, look out for new bugs)
+
+NOTE: Please include gpsp.cfg with EBOOT.PBP, this shouldn't be
+ necessary but I think it is right now.
+
+# Fixed a nasty bug that shouldn't have made it into the initial
+  release; a lot of games that TECM.. erm.. crash won't anymore.
+  NOTE: This doesn't mean that no game will ever crash, freeze,
+  otherwise not work.
+# Fixed some crashes in the GUI and the ability to "go up" past
+  ms0:/PSP. Made the "go up" button square like it was supposed to
+  be (instead of cross).
++ There's now a menu that you can access, by default press right
+  while holding down triangle for the frameskip bar.
++ Menu option: resize screen aspect ratio, the default is now
+  "scaled 3:2" which makes it look more like a normal GBA. You
+  can use "fullscreen" (what it was like before) or "unscaled 3:2"
+  (tiny but pixel for pixel like a GBA)
++ Menu option: You can now load new games while the current one
+  is running.
++ Menu option: You can now restart the currently running game.
++ Menu option: Frameskip variation - this defaults to "uniform"
+  whereas it defaulted to "random" last release. Basically, turn
+  it on random if you find that frameskip causes flickering
+  animations to make things disappear. Other than that it will
+  generally look better on uniform.
++ GUI and file loading now have "auto repeat" on the buttons so
+  they're not such a pain to navigate.
++ Menu option: Added support for 128KB flash ROM, some games
+  require it (Pokemon Firered/Leaf Green, Super Mario Advance 4),
+  turn it on before running the game to make sure it works.
+  NOTE: There are some versions of these ROMs that have been
+  hacked to get around their 128KB flash, and may not even work
+  properly at all. Look out for them, these games should save
+  128KB save files after you set the setting to it, IF they use
+  128KB flash.
++ Menu option: Added ability to make the .sav files only update
+  when you exit the emulator, use with extreme caution (in other
+  words, it's not a good idea to use something like this in beta
+  quality software if you care about your saves). Does NOT update
+  if you exit through the home button, don't use the home button
+  if you can help it.
++ Zip support thanks to SiberianSTAR. It will load the first file
+  with the extension .gba or .bin that it finds.
++ Menu options are saved to gpsp.cfg. Note that it does not save
+  frameskip options or flash ROM options because these are very
+  per game particular.
++ The emulator will now try to save backup files to something
+  more matching the backup size than a fixed 64KB.
+@ Loading ROMs and the auto save of the .sav files is MUCH faster
+  now. Thanks for the heads up on how to improve this from pollux!
+@ While coding for the screen resize code I found that SDL just
+  wasn't cutting it and had to code for the GU myself. Turns out
+  the new code is faster (but because it is render code any
+  improvement will be diminished to nothing as frameskip is
+  increased). Special thanks to Zx-81 for the tips on this one
+  and for his GU code in the PSPVBA source as an example.
+@ Added some games to game_config.txt. Note that not all versions
+  of these ROMs will work with these options, try to use the USA
+  version if possible.
+
+8-19-2006  v0.5 - Initial release (public beta quality)
+
+
+-- About --
+
+gameplaySP (gpSP for short) is a GBA emulator written completely from
+scratch. It is still pretty young (only having started a 3 months prior
+to the first release) and thus rather immature, but it does a decent
+job of playing a number of games, and is being improved upon somewhat
+regularly. It is currently somewhat minimalistic, in the sourcecode,
+presentation, and features. Its number one focus is to deliver a GBA
+gaming experience in the most playable way that PSP can manage, with
+frills being secondary (although still a consideration, at least for
+some of them).
+
+Having said that, optimization was the important way in achieving this
+goal, with overall compatability being a near second. Because of this
+some games may not run at the favor of running more games significantly
+better. Of course, the compatability will improve with time. The
+compatability in the current version (0.8) is perhaps around 80%
+(assuming the correct BIOS image is used).
+
+Many games will run at their best out of the box, but some games will
+run very slowly unless idle loops are taken care of. There is a supplied
+ROM database, game_config.txt, that gives idle loop targets and other
+settings that may help a game to run better (or at all) on a per-game
+basis. Currently (as of version 0.8) a few dozen games are on this list,
+mostly only USA versions. This list will continue to be updated; there's
+no real telling exactly how many of the ~2500 GBA games will need to
+appear here.
+
+gpSP currently requires an authentic GBA BIOS image file to run. It will
+make no effort to run without one present; this file is 16kb and should
+be called gba_bios.bin and present in the same location as the EBOOT.PBP
+file. Please do not ask me where to obtain this, you'll have to look
+online or grab it from a GBA. Note that it is not legal to have this file
+unless you own a GBA, and even then it's rather gray area.
+
+
+
+-- Features --
+
+gpSP mostly emulates the core Gameboy Advance system. As of right now it
+does not emulate any special hardware present on various GBA cartridges.
+
+
+What it emulates:
+
+GBA CPU: All ARM7TDMI ARM and Thumb mode opcodes except block memory w/
+ s-bit (probably aren't used in GBA games)
+Video: Modes 0, 1, 2 almost completely, basic 3-5 support, sprites,
+ windows/OBJ windows
+Interrupts: HBlank, VBlank, all timers, all DMA channels, keypad
+DMA: Immediate, HBlank, VBlank, sound timer triggered
+Sound: Both DirectSound channels and all 4 GBC audio channels
+Input: Basic GBA input delivered through PSP controls
+Cartridges: Currently supports ROMs up to 32MB in size (the maximum for
+GBA) with the technique of ROM page swapping to fit within PSP's RAM.
+Backup: 32/64kb SRAM, 64/128kb flash, 512bit/8kb EEPROM
+RTC: The real-time clock present in cartridges such as most of the
+ Pokemon games and some others.
+
+
+What it lacks:
+
+Video: No mosaic, bitmap modes lack color effects (alpha, fades),
+ there might be some minor inaccuracies in blending...
+Cycle accuracy: Very cycle innacurate; CPU is effectively somewhat
+ overclocked, meaning games with rampant idle loops will probably run
+ rather poorly. DMA transfers effectively happen for free (0 cycle).
+ Please do NOT use gpSP as a first source for developing GBA homebrew,
+ try No$GBA instead.
+
+
+Additional features it has:
+- The ability to attempt to run games at faster than GBA speed (sometimes
+  they can end up a lot faster, other times not so much)
+- Savestates: the ability to save a game's state to a file and resume
+  playing where you left off later.
+- Mild cheat support
+
+
+Features that it doesn't have (please don't ask me to implement these!)
+- Wi-fi multiplayer
+
+
+-- Controls --
+
+The default control scheme is very simple. If you don't like it you can
+change it in the configuration menu.
+
+At the ROM selection screen:
+
+Up/down: navigate current selection window.
+Left/right: switch between file window and directory window.
+Circle/start: select current entry.
+Square: go one directory up.
+
+In game:
+
+Up/down/left/right: GBA d-pad
+Circle: GBA A button
+Cross: GBA B button
+Square/start: GBA start button
+Select: GBA select button
+Left trigger: GBA left trigger
+Right trigger: GBA right trigger
+Triangle: Adjust frameksip
+
+In frameskip adjustment:
+
+Hold down triangle to keep up, press up/down to increase/decrease
+frameskip, respectively. Press down at 0 to change to auto, and up
+at auto to change to 0.
+
+In the menu:
+
+Up/down: navigate current menu.
+Left/right: change value in current menu selection (if a value is present)
+Circle/start: select current entry (see help for entry to see what this means)
+Square: exit the current menu.
+
+
+-- Frameskip --
+
+The purpose behind frameskip is to cause the emulator to not render every
+frame of graphics to make the emulation closer to fullspeed. Many games will
+run fullspeed without skipping any frames, however, some (particularly more
+graphically demanding ones) will require this.
+
+Frameskip can be set to two forms, either auto or manual. Auto will attempt
+to skip only as many frames as necessary to make the game full speed, and
+will not skip more than 4 in a row no matter what speed the game runs at
+(at this point the benefits of frameskip yield diminishing returns).
+
+It is recommended that you keep frameskip on auto, but manual is maintained
+as an option if you want it and works as follows:
+
+Manual frameskip will only render one out of every (n + 1) frames, where n
+is the current frameskip value (so 0 will render everything). Increasing
+the frameskip can improve speed, especially with very graphically
+intensive games.
+
+
+-- Cheats --
+
+Currently, gpSP supports some functionality of Gameshark/Pro Action Replay
+cheat codes. To use these, you must first make a file with the same name
+as the ROM you want the cheat code to apply to, but with the extension .cht.
+Put this file in the same directory as the ROM. To make it use a normal
+text editor like notepad or wordpad if you're on Windows.
+
+To write a code, write the type of model it is, gameshark_v1, gameshark_v3,
+PAR_v1, or PAR_v3. gameshark_v1/PAR_v1 and gameshark_v3/PAR_v3 respectively
+are interchangeable, but v1 and v3 are not! So if you don't know which
+version it is, try both to see if it'll work.
+
+Then, after that, put a space and put the name you'd like to give the cheat.
+
+On the next several lines, put each cheat code pair, which should look like
+this:
+
+AAAAAAAA BBBBBBBB
+
+Then put a blank line when you're done with that code, and start a new code
+immediately after it. Here's an example of what a cheat file should look
+like:
+
+
+gameshark_v3 MarioInfHP
+995fa0d9 0c6720d2
+
+gameshark_v3 MarioMaxHP
+21d58888 c5d0e432
+
+gameshark_v3 InfHlthBat
+6f4feadb 0581b00e
+79af5dc6 5ce0d2b1
+dbbd5995 44b801c9
+65f8924d 2fbcd3c4
+
+gameshark_v3 StopTimer
+2b399ca4 ec81f071
+
+
+After you have written the .cht file, you have to enable the cheats
+individually in the game menu. Go to the Cheats/Misc menu, and you will
+see the cheats; turn them on here. You may turn them on and off as you
+please, but note that some cheats may still hold after you turn them off,
+due to the nature of the system. Restart to completely get rid of them.
+
+IMPORTANT NOTES:
+
+This is still very work in progress! I basically added this in only 1.5
+or so hours, and I don't have a lot of time right now to work on it
+before releasing. So I'll probably improve it later.
+
+Not all of gameshark's features are supported, especially for v3. Only
+basic cheats will work, more or less.
+
+Cheats may be unstable and may crash your game. If you're having problems
+turn the cheats off.
+
+Really, there's no guarantee that ANY cheats will work; I tried a few and
+some seem to work, others are questionable. Try for yourself, but don't
+expect anything to actually work right now. Do expect this feature to
+improve in future versions.
+
+
+
+-- Frequently Asked Questions --
+
+Q) How do I run this on my PSP?
+
+A) Provided is an EBOOT.PBP which will run as is on a 1.0 firmware
+   PSP or custom firmware that can run unsigned EBOOTs. On 1.5 firmwares
+   you must use a kxploit tool to run it (try SeiPSPtool). On 2.0
+   firmwares and higher further exploits must be used - see
+   <a href="http://pspupdates.qj.net/">http://pspupdates.qj.net/</a> for more information. Note that I have NOT
+   tested this emulator on any firmware version besides 1.5, and it's
+   very possible that it doesn't run well, or at all on higher versions.
+   Therefore I strongly recommend you downgrade if possible, and use
+   Devhook to run games that require &gt; 1.5 version firmwares.
+
+   Be sure to include in the same directory as the EBOOT.PBP file the
+   game_config.txt file included and the gba_bios.bin file which you
+   must provide yourself.
+
+   gpSP does not run on PSPs with version 2.71 or higher firmware yet,
+   nor does any other homebrew executable.
+
+
+Q) What is a BIOS image file? Why do I need it to run gpSP? Other GBA
+   emulators don't require this...
+
+A) The GBA BIOS image file is a copy of a ROM on the GBA system that
+   has code for starting up the GBA (it shows the logo), verifying the
+   game, and most importantly, providing utility functions for the games
+   to use. It is the latter that gpSP needs the BIOS present for. It's
+   possible to replace all of these functions with equivilent code, but
+   this will take time - in the future gpSP may not require a BIOS image.
+
+
+Q) I can't find this BIOS image.. please send it to me.
+
+A) Sorry, but you're on your own. I won't send you a BIOS or tell you
+   where to get one (unless you want to rip it from a GBA yourself, in
+   which case I'll just give you the same link at the top). I can't do
+   this because it's not legal to send it around and I don't want to
+   get a reputation for illegally distributing BIOS images.
+
+
+Q) How do I know I have the right BIOS?
+
+A) If you have md5sum you can check if it has this hash:
+   a860e8c0b6d573d191e4ec7db1b1e4f6
+   That BIOS should work fine. I think that some others work fine too,
+   although I haven't confirmed this with absolute certainty. It's also
+   theoretically possible to use custom (and free) BIOS replacements,
+   but I don't know of any publically availablone ones.
+
+   As far as I'm aware there are two BIOSes floating around, I doubt
+   you'll get one that isn't one of those two. There's a very easy way
+   to determine which one you have - just look at the very first byte in
+   a hex editor. The correct BIOS begins with 0x18, the buggy BIOS begins
+   with 0x14.
+
+
+Q) My favorite game won't run.
+
+A) There probably isn't anything you can do about this, although a
+   change to game_config.txt might help. gpSP is still an emulator in
+   its infancy so the compatability is not superb. I don't have time
+   to test too many games so I'm releasing it as a public beta to get
+   a feel for some things that don't work. The next version could
+   perhaps fix it, or it might never run. There are always other
+   emulators of course, please try one.
+
+   However, before nagging me there is one thing I recommend you try,
+   and that is to add the option "iwram_stack_optimize = no" for the
+   game in game_config.txt. See the file itself for more information
+   on how to do this. If this fixes your game (and it's not already
+   in the game_config.txt) please tell me about it.
+
+
+Q) My favorite game is very slow.
+
+A) Emulating GBA takes a number of resources and getting it done well
+   on PSP is no simple task by any means. Some games are just going to
+   overwhelm the emulator completely. Of course, there is one special
+   case of game (a lot of early generation games fall under this
+   category) that can be made much faster by a simple addition to the
+   game_config.txt file. Wait for a new version of this file or the
+   next version of the emulator and the game may be improved.
+
+   That aside, there are still numerous optimizations that can be done,
+   and I sure you future versions will be faster (I just can't tell you
+   how much)
+
+   Also, a lot of games will be sped up considerably by adding an
+   idle_loop_eliminate_target line for it in game_config.txt. There
+   are some more obscurer options there that can improve speed too. If
+   the game is VERY slow there might be something wrong with its
+   emulation that can be improved. For instance, if you can't get a game
+   to run fullspeed on any frameskip you should e-mail me about it.
+
+
+Q) Some games run fullspeed but the sound is messed up. Why?
+
+A) At least 9 out of 10 times it means the game isn't really running
+   full speed, but just that you can't notice the difference. Increasing
+   frameskip will almost always improve sound quality in these
+   situations, to a certain point (after around frameskip 3 you
+   probably won't be seeing many more returns if it isn't already
+   fullspeed). The rest of the time it means there's a bug somewhere else
+   in the emulator, probably in the CPU core. Chances are that all you
+   can do is wait for it to be fixed in a later release.
+
+
+Q) The emulator crashed!
+
+A) Most games that don't run will probably take the emulator down with
+   it, or it could be an emulator bug completely unrelated to the game
+   (but unlikely). Press home and wait for the next version.
+
+   There is some information that comes up when the game crashes. This
+   information may be slightly useful to me, but chances are it
+   usually won't be all that interesting.
+
+   These days games are more likely to exit with a "bad crash" error.
+   This number is possibly useful to me, but to debug a game I'll have
+   to reproduce the crash anyway. When this happens it's probably due to
+   a bug in the CPU core that hasn't been fixed yet.
+
+
+Q) Why won't my game save?
+
+A) The game might need 128KB flash turned on and might not be listed in
+   game_config.txt. See game_config.txt for more information regarding
+   this. Be sure to include game_config.txt with the EBOOT.PBP file.
+
+   Other games might simply have bugs in the save support. For now, use
+   savestates as an alternative if you can't save.
+
+
+Q) How do I change sound quality?
+
+A) Right now, you can't. For those wondering, sound is locked at 44.1KHz
+   (sounds a bit high? It is, but it's currently necessary to play
+   everything correctly). I don't have any plans to allow changing this
+   right now, because I don't think there's really much reason to be
+   able to (it'd be a tiny speed boost at best and I don't think SDL even
+   allows for anything besides this sampling rate on PSP)
+
+
+Q) What is this emulator's name?
+
+A) Um.. what? It's gameplaySP, isn't it? You call it gpSP for short.
+   Somehow the name can't have the acronyms gbSP, gbapSP, or really
+   just about anything else you feel like giving it. Oh, and if you
+   really want to make me happy get the capitalization right too.
+   That's gpSP, not gPSP, GPsp.. you get the idea.
+
+
+Q) Does gpSP run Gameboy/Gameboy Color games? Will it later?
+
+A) No. Even though GBA can run these games it uses separate hardware
+   that proper GBA games have no access to (save for the audio chip),
+   and thus there's no point including it in a GBA emulator (it
+   doesn't help run GBA games). I recommend using a GB/GBC emulator
+   like Rin for playing these games. It'll probably give you a lot
+   more options anyway. gpSP will never actually emulate GB/GBC
+   games. You'd may as well be waiting for it to emulate PS2 games...
+   (that was an analogy. gpSP won't ever emulate PS2 games. &gt;_&gt;)
+
+
+Q) Other emulators use the PSP's graphical hardware to accelerate the
+   video emulation. Is this possible for gpSP?
+
+A) I'm honestly not too sure at this point. It's definitely a rather
+   complicated procedure, and I don't think it'll be possible to
+   accurately accelerate alpha blending. On the other hand, affine
+   transformations could perhaps receive a speed boost this way. Any
+   solution would have to be hybrid hardware/software, which might be
+   possible due to the nature of the PSP's VRAM. Maybe someone will
+   be willing to help me think of possibilities here?
+
+   But don't bother of you're just going to tell me to render a list
+   of quads...
+
+
+Q) Other emulators use the PSP's second CPU to offload the sound
+   emulation. Is this possible for gpSP?
+
+A) Yes, but it wouldn't improve it nearly as much as say, SNES9x TYL.
+   This is because most of the processing that goes into sound on a GBA
+   game is done in the CPU, not in dedicated audio hardware. It could
+   help a little, but probably not a lot. Maybe enough to be worthwhile.
+   It might also be possible to split the video rendering to the main
+   CPU and the main emulation to the secondary one, but there are a lot
+   of coherency issues involved.
+
+
+Q) I heard gpSP can only load games 16MB or smaller in size. Is this
+   true? What about zipped games?
+
+A) As of version 0.8 gpSP can play 32MB ROMs. However, they must be
+   unzipped. The reason for this is that parts of the ROM are constantly
+   loaded to memory as needed, and for this to be as fast as possible the
+   ROM has to be present on the memory stick in raw format.
+
+   You might be wondering, why not just have gpSP unzip the ROM to a file
+   then delete the file when it is done? The reason why is because this
+   would impose a "hidden" requirement of 32MB on the user that very
+   likely may not be there. Furthermore, there are only a few 32MB games
+   that anyone actually wants to play. If you only have one 32MB game on
+   your memstick then it'd actually require signifnicantly more free space
+   to hold both the ROM and the 32MB raw file. With 2 32MB ROMs you only
+   gain a around 10-25MB of free space, depending on how effective the
+   compression is.
+
+
+Q) Savestates? From other emulators??
+
+A) See the savestates option in main menu. gpSP will probably never
+   support savestates from other emulators, there's just too much in the
+   way of emulator specific data in them.
+
+   Savestates are currently 506,943 bytes. They would be a little smaller
+   without the snapshot, but I find that very useful and it wouldn't help
+   size immensely. Compression would help, but I wanted the size to be
+   constant so you knew exactly how much you could hold and to improve
+   save/load speed.
+
+
+Q) What's with the zip support?
+
+A) I hear stories that some games work unzipped and not zipped, so you
+   might want to try unzipping them if it gives you problems. You also
+   might want to try making fresh zips with WinRAR - users have
+   reported some higher success rates doing this.
+
+
+Q) What's with the config file? Should I make it read only?
+
+A) There was a bug in version 0.6 that caused the config file to not
+   get updated or get corrupted sometimes. Hopefully this is fixed now,
+   but if it DOES get corrupted making it read only can prevent this
+   from happening in the future.
+
+
+Q) So when WILL the next version be released?
+
+A) Sorry, but I almost never announce release dates. Furthermore, I'll
+   probably be pretty hush hush on internal development, just to keep
+   people from nagging me about it and building too much suspense.
+
+
+Q) I don't like this emulator. Are there other alternatives?
+
+A) Yes. Try PSPVBA by Zx-81 (<a href="http://zx81.dcemu.co.uk/">http://zx81.dcemu.co.uk/</a>). Overall I doubt
+   the compatability is significantly higher than gpSP's anymore, but
+   I'm sure there are some games it runs that gpSP doesn't.
+
+
+Q) I heard there was a version of gpSP for PCs. Is that true?
+
+A) I developed this emulator internally on PC. It might have a speed
+   advantage over other PC GBA emulators, although the PSP version has
+   more sophisticated optimizations. Most people have fast enough
+   computers to run better GBA emulators for PC and gpSP lacks some
+   important features (screen resizing) that the PSP version kinda
+   hides. Even though gpSP spent a majority of its development
+   gestation as a PC app it was always developed with the PSP in mind,
+   so the PC version will probably not see the light of the day unless
+   I get overwhelming demand for it. It is, however, possible to
+   build it from the source. But I request that you don't distribute
+   such builds. If you happen to find one, bear in mind that I don't
+   offer any support for it, and as far as I'm concerned it won't
+   exist.
+
+
+Q) I hear there's a version of gpSP for other platforms too, like
+   Dreamcast. And I hear they're slow! What gives?
+
+   These are ports, done by other people (or maybe myself?). This is
+   possible because gpSP is open source and its base version is fairly
+   portable, but to run fast enough on anything but platforms quite a
+   bit faster than PSP it at least needs a CPU specific dynarec backend.
+
+   I don't (necessarily) maintain all builds of gpSP, so you'll have to
+   contact the authors of these ports for more information. That
+   notwithstanding, I try to get as involved in other ports of gpSP as
+   I can.
+
+
+Q) I want to modify gpSP. How can I do this, and am I at liberty to do
+   so?
+
+A) Yes, you are, under the terms of the GPL (see the included
+   COPYING.DOC). You can download the sourcecode from whereever you
+   downloaded this; if you can't find it please e-mail me and I'll give
+   you a link to it. I would vastly appreciate it if you contacted me first
+   before forking my project, especially if you're just looking to gain
+   recognition without adding much to it. It's better to keep all changes
+   tidy in one branch of development.
+
+   I would like to stress this a little more seriously (hopefully those
+   interested are reading this). Although you are legally entitled to
+   release your own forks of gpSP it would be much more benficial to me,
+   to you, and to the users of this program if you instead tried working
+   with me to get your changes incorporated into the next version. I
+   really don't feel like competing with other builds of my source
+   anymore, so please do me a big favor and send me an e-mail if you want
+   to work with gpSP.
+
+
+Q) How do I build gpSP?
+
+A) make will build it. You need to have SDL for PSP installed, as well
+   as the standard PSP toolchain/PSPSDK and zlib. gpSP isn't much of a
+   "build it yourself" program so please don't bother me much about how to
+   build it unless you have a good reason for wanting to do so.
+
+
+Q) What is with the version numbers?
+
+A) Anything less than 1.0 means beta. Beta means that I still have major
+   plans for working on it, and that I don't fully back it as being
+   stable or reliable software. Of course, if it does hit 1.0, that doesn't
+   mean it'll be perfect. It just means I'll have spent a lot of cumulative
+   time working things out. The closer it gets to 0.9, the happier I am with
+   it overall.
+
+
+Q) Donations?
+
+A) Very appreciated. exophase@gmail.com on PayPal. &lt;3
+
+
+Q) How can I contact you?
+
+A) exophase@gmail.com, Exophase on AIM, exophase@adelphia.net on MSN. I
+   welcome IMs, but if you nag me a lot you'll make me sad inside. And
+   don't ask me for ROMs or the GBA BIOS. I figured this was common sense
+   but apparently not.
+
+
+-- Credits --
+
+Exophase: main developer
+siberianSTAR: zip support
+psp298: analog nub code
+
+Beta testers for 0.7:
+theohsoawesome1
+thisnamesucks837
+blackdragonwave9
+dagreatpeewee
+xsgenji
+
+Beta testers for 0.8:
+Runaway_prisoner
+theohsoawesome1
+tanyareimyoko
+spynghotoh2020
+
+Beta testers for 0.9:
+RunawayPrisoner (my right hand man)
+Veskgar (my left hand man)
+qasim
+
+-- Special thanks --
+
+Quasar84: He's helped me in so many ways with this. We both kinda learned
+GBA together, he did little demos for me and I got them emulated. It was
+great trying out your more advanced code for your own projects once you
+got to them, it was equally rewarding to see your work and to be able to
+run it at the same time. Least of all I wouldn't have been able to do any
+of this without your constant support and presence. I really owe this
+release to you.
+
+gladius: You are an amazing GBA coder. I wouldn't have been able to get
+through some tough parts without your help. Its been good talking about
+ideas with you.. I'm sure you're glad to see that there's finally a GBA
+emulator with dynarec ;)
+
+
+Many, many others of course, probably too many to name, and I don't want
+to make anyone feel bad by putting others above them (well, except those
+two, heh) so if you think you should be on here, you probably should be!
+Just pretend you are for now, and maybe I'll put you here next time.
+
+</pre></div>
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.29037s from github-fe149-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.72 12.5l-6.85-11.98C8.69 0.21 8.36 0.02 8 0.02s-0.69 0.19-0.87 0.5l-6.85 11.98c-0.18 0.31-0.18 0.69 0 1C0.47 13.81 0.8 14 1.15 14h13.7c0.36 0 0.69-0.19 0.86-0.5S15.89 12.81 15.72 12.5zM9 12H7V10h2V12zM9 9H7V5h2V9z"></path></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-d788212915194925ff3d2ef2cfbaec5dc1333d76cdb222ff551bc0a8c9a23172.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-60427945fb3a23bc232ceee1b89ce28cfa14a19de48dbe75a849af968fa3fa48.js"></script>
+      
+      
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.72 12.5l-6.85-11.98C8.69 0.21 8.36 0.02 8 0.02s-0.69 0.19-0.87 0.5l-6.85 11.98c-0.18 0.31-0.18 0.69 0 1C0.47 13.81 0.8 14 1.15 14h13.7c0.36 0 0.69-0.19 0.86-0.5S15.89 12.81 15.72 12.5zM9 12H7V10h2V12zM9 9H7V5h2V9z"></path></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+
