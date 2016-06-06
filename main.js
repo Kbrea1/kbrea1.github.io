@@ -19,3 +19,4 @@ else
 }
 
 bounceBubbles();
+<a href="http://jsemu2.github.io/gba/">link test</a>
