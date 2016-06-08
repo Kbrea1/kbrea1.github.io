@@ -2,4 +2,6 @@ p{
   font-size: 48px;
   margin-top:100px;
 }
-
+body{
+  background-image: url("PinkGuy.jpg")
+}
