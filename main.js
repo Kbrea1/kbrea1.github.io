@@ -19,3 +19,7 @@ else
 }
 
 bounceBubbles();
+$("button").click(function(){
+    $("#Pinky").css("Postion", "fixed").css("right","100")
+    }
+}
